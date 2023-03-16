@@ -30,6 +30,10 @@ cube(`kcHome`, {
     deals: {
       sql: `id`,
       type: `count`
+    },
+    price: {
+      sql: `price`,
+      type: `avg`
     }
   },
 
