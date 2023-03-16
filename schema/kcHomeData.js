@@ -24,15 +24,9 @@ cube(`kcHome`, {
     sqft_lot15
   FROM finno-task.samples.kc_house_data
   `,
-
   preAggregations: {
   },
-
   measures: {
-    avgPrice: {
-      sql: `price`,
-      type: `avg`
-    },
     deals: {
       sql: `id`,
       type: `count`
@@ -63,6 +57,10 @@ cube(`kcHome`, {
     sqftBasement: {
       sql: `sqft_basement`,
       type: `string`
+    },
+    price: {
+      sql: `price`,
+      type: `number`
     }
   }
 });
