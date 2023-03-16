@@ -41,7 +41,7 @@ cube(`kcHome`, {
 
   dimensions: {
     date: {
-      sql: `cast(left(date,8) as date format 'YYYYmmdd')`,
+      sql: `timestamp(cast(concat(substr(date, 0 , 4), '-' ,substr(date, 5 , 2), '-' ,substr(date, 7 , 2) ) as date))`,
       type: `time`,
       },
     bedrooms: {
